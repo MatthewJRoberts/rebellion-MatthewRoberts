@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Global Styling */
+div.encryption-container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    transform: translateY(10vh);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.33);
+}
+div.columns {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+div.columns div.column {
+    flex: 1;
+}
+
+/* Header Styling */
+div.encryption-container header {
+    background-color: #c20000;
+    padding: 1.25em 1.5em;
+    border-radius: 12px 12px 0px 0px;
+    position: relative;
+}
+div.encryption-container header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-image: url('./../images/banner-cut-red.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.encryption-container header div.grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "brand other";
+    align-content: center;
+    align-items: center;
+}
+div.encryption-container header p {
+    color: #fff;
+}
+
+/* Nav / Sub-Header Styling */
+div.encryption-container nav {
+    background-color: #131212;
+    padding: 1.25em 1.5em;
+    position: relative;
+}
+div.encryption-container nav::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-image: url('./../images/banner-cut-black.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+div.encryption-container nav a {
+    color: #fff;
+    cursor: pointer;
+    padding: 1em;
+}
+div.encryption-container nav a:hover {
+    text-decoration: underline;
+}
+div.encryption-container nav a.active {
+    text-decoration: underline;
+}
+
+/* Main Styling */
+div.encryption-container main {
+    padding: 2.5em;
+}
+div.encryption-container main form button {
+    padding: 0.75em;
+    margin-top: 1em;
+    background-color: #c20000;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    border: none;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+div.encryption-container main form button:hover {
+    background-color: #c42121;
+}
+div.encryption-container main form label {
+    display: block;
+    text-align: left;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+}
+div.encryption-container main form textarea,
+div.encryption-container main form input,
+div.encryption-container main form select {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+
+    border: solid 1px #777777;
+    border-radius: 4px;
+}
+div.encryption-container main form textarea,
+div.encryption-container main form input,
+div.encryption-container main form select::placeholder {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+div.encryption-container main form textarea {
+    resize: none;
+}
+
+div.encryption-container main form {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+div.encryption-container main form.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    animation: fadeAnim 1s;
+}
+@keyframes fadeAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+div.encryption-container main form .title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+}
