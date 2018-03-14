@@ -1,8 +1,8 @@
 
 let tabSelected = false;
 
-let decryptionForm = document.querySelector('#decryption');
-let encryptionForm = document.querySelector('#encryption');
+const decryptionForm = document.querySelector('#decryption');
+const encryptionForm = document.querySelector('#encryption');
 
 function SwitchTab() {
     if(!tabSelected) {
